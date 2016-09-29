@@ -1,5 +1,5 @@
 # Cyberknights Website
--> It's a dynamic website with admin panel deployed<br>
+<li> It's a dynamic website with admin panel deployed<br>
 -> Kwiz bot , agenda maker and few web apps are been added <br>
 -> Decription and download links for our previous and current project<br>
 -> Developers details is added <br>
