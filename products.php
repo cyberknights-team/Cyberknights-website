@@ -101,7 +101,7 @@
 				   <br>
 				   <img src="assets/apps/cyberknights_website.png" alt="" height="70" width="260">
 				   <br><br><br>
-				   <a target="_blank" class="uk-button uk-button-primary" href="https://github.com/logaprakash/cyberknights_website/">View source in GitHub</a>
+				   <a target="_blank" class="uk-button uk-button-primary" href="https://github.com/cyberknights-team/Website">View source in GitHub</a>
 				  </center>
 				  
                 </div>
