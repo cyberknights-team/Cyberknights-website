@@ -47,8 +47,14 @@
                     </div>
 
                 </div>
-            </div>
+				
 
+            </div>
+<hr class="uk-grid-divider">
+               <center> <h2>Imagine Cup Hello Cloud Contest</h2></center>
+				<h4>Activity 1 :Twiter Section</h4>
+				<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I just entered for a chance to win $1000 with <a href="https://twitter.com/MSFTImagine">@MSFTImagine</a> <a href="https://twitter.com/hashtag/HelloCloudSweepstakes?src=hash">#HelloCloudSweepstakes</a> by leveraging the power of <a href="https://twitter.com/hashtag/Azure?src=hash">#Azure</a>! <a href="https://t.co/o7xGzH4xF4">https://t.co/o7xGzH4xF4</a></p>&mdash; logaprakash (@logaprakash03) <a href="https://twitter.com/logaprakash03/status/781484324537245696">September 29, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <hr class="uk-grid-divider">
 				
              <footer>
