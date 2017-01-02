@@ -55,27 +55,8 @@
                     </div>
                     <h2 class="uk-margin-bottom-remove">Logaprakash Raju</h2>
                     <p class="uk-text-large uk-margin-top-remove uk-text-muted">"Play Maker"</p>
-					
                 </div>
-                 <div class="uk-width-medium-1-4 uk-text-center uk-row-first">
-                    <div class="uk-thumbnail uk-overlay-hover uk-border-circle">
-                        <figure class="uk-overlay">
-                            <img class="uk-border-circle" src="assets/developers/logaprakash.jpg" alt="" height="200" width="200">
-                            <figcaption class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle uk-text-center uk-border-circle">
-                                <div>
-                                    <a href="mailto:sujoyroy@gmail.com" class="uk-icon-button uk-icon-envelope"></a>
-									<a target="_blank" href="https://www.facebook.com/logaprakash03" class="uk-icon-button uk-icon-facebook"></a>
-                                    <a target="_blank" href="https://twitter.com/logaprakash03" class="uk-icon-button uk-icon-twitter"></a>
-									<a target="_blank" href="https://in.linkedin.com/in/loga-prakash-raju-4b24a9b0" class="uk-icon-button uk-icon-linkedin"></a>
-                                    
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <h2 class="uk-margin-bottom-remove">sujoy roy</h2>
-                    <p class="uk-text-large uk-margin-top-remove uk-text-muted">"some nickname"</p>
-					
-                </div>
+                
 				<div class="uk-width-medium-1-4 uk-text-center uk-row-first">
                     <div class="uk-thumbnail uk-overlay-hover uk-border-circle">
                         <figure class="uk-overlay">
