@@ -45,6 +45,7 @@
                     <img src="assets/apps/hlin.png" alt="" height="400" width="660">
 				<center>   
 				   <a target="_blank" class="uk-button uk-button-primary" href="download/HlinWindowsDesktop">Download HLIN from Windows Store</a>
+				   <a target="_blank" class="uk-button uk-button-primary" href="https://github.com/cyberknights-team/HlinWindows">View source in GitHub</a>
 				</center>
 				   <p>
 				   <b>Platform: </b>Windows 8 or above (PC)<br>
@@ -107,36 +108,9 @@
                 </div>
 
                </div>
-			   <br><br><br>
-				<hr class="uk-grid-divider">
-			 <br><br><br>
-			  <div class="uk-grid" data-uk-grid-margin="">
-                     <div class="uk-width-medium-1-2 uk-row-first">
-                    <img src="assets/apps/hlinPro.png" alt="" height="400" width="660">
-				<center>   
-				   <a target="_blank" class="uk-button uk-button-primary" href="download/HlinProWindowsDesktop">Download HLIN PRO from Windows Store</a>
-				</center>
-				   <p>
-				   <b>Platform: </b>Windows 8 or above (PC)<br>
-				   <b>DISCLAIMER: </b>The app/server/author do not hold any responsibility over the content shared through this service.</p>
-			   </div>
-                <div class="uk-width-medium-1-2">
-				<h1>Hlin Pro</h1>
-                    <ul>
-					 <li>Take your main stream file sharing to the next level of security!</li>  
-					 <li>Protect and share your files to as many people as you wish based on our state of the art Network Lock and Geo-Lock.</li>
-					 <li>HLIN is a One-to-Many Secured File Sharing Application which creates a virtual perimeter of access around the co-ordinate from which it was uploaded.</li>
-                    </ul>				
-				<h2>Features</h2>
-					<ul>
-					 <li>Multiple file upload in single access key</li>  	
-					 <li>Upload limit per key is 2.5gb</li>
-                     <li>Key will be available for longer time</li>		 
-				  </ul>
-			   </div>
 
-                
-               </div>
+			 
+       
 			   <br><br><br>
 			   <hr class="uk-grid-divider">
 			   <br><br><br>
