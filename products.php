@@ -45,7 +45,7 @@
                     <img src="assets/apps/hlin.png" alt="" height="400" width="660">
 				<center>   
 				   <a target="_blank" class="uk-button uk-button-primary" href="download/HlinWindowsDesktop">Download HLIN from Windows Store</a>
-				   <a target="_blank" class="uk-button uk-button-primary" href="https://github.com/cyberknights-team/HlinWindows">View source in GitHub</a>
+				   <a target="_blank" class="uk-button uk-button-primary" href="http://cyberknights.in/github-hlin">View source in GitHub</a>
 				</center>
 				   <p>
 				   <b>Platform: </b>Windows 8 or above (PC)<br>
