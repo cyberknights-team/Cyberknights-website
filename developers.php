@@ -55,6 +55,13 @@
                     </div>
                     <h2 class="uk-margin-bottom-remove">Logaprakash Raju</h2>
                     <p class="uk-text-large uk-margin-top-remove uk-text-muted">"Play Maker"</p>
+					<br>
+					<center><a href="http://cyberknights.in/logaprakash">
+					<div class="uk-form-row">
+                                <div class="uk-form-controls">
+                                    <button name="send" class="uk-button uk-button-primary">View Logaprakash's Portfolio</button>
+                                </div>
+                    </div></a></center>
                 </div>
                 
 				<div class="uk-width-medium-1-4 uk-text-center uk-row-first">
