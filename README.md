@@ -7,3 +7,4 @@
 <li> Technologies used Azure SQL DB to store data<br>
 <li> Made using PHP,CSS3,HTML5,Javascript,AJAX,Jquery<br>
 <li> FrameWork used - UI Kits<br>
+<li> Developer Portfolio added<br>
