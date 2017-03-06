@@ -31,7 +31,7 @@
 		(function tick(){
 			
 			// Time left
-			left = Math.floor(((new Date("mar 9, 2017 18:00:00")) - (new Date())) / 1000);
+			left = Math.floor(((new Date("mar 8, 2017 18:00:00")) - (new Date())) / 1000);
 			
 			if(left < 0){
 				left = 0;
