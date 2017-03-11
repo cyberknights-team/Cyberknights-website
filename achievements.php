@@ -41,31 +41,33 @@
          <br><br><br>  
                <div class="uk-grid" data-uk-grid-margin="">
         <div class="uk-width-medium-1-2 uk-row-first">
-		  <h1>PLoT</h1>
-					
-			<h3>Description</h3>
-				<p>
-				PLoT is a virtual team space, where the conventional way of sharing files is replaced with vector mapping of files to make it faster and even more secure to use while using much lesser space at the same time.
-				PLoT provides it's users with one of the secure platforms available out there for team collaboration with the best in house features like Geo-Fencing, Network-Fencing, Device Restriction etc. Using Device Restriction feature, the user can restrict the usage to the only registered device associated with a user. i.e. "One User Account, One Device."
-				Reducing the junk files has been the core idea of PLoT with its user as well as server friendly features making it one of the best available application for file management and the preferred options for organizations.
-				</p>
-                    </div>
-
-                <div class="uk-width-medium-1-2">
-					<img src="assets/apps/plot.png" alt="" height="400" width="660">
+                    <img src="assets/apps/plot.png" alt="" height="400" width="660">
 				<center>   
-				   <a target="_blank" class="uk-button uk-button-primary" href="download/plot">Download PLoT from Windows Store</a>				  
+				   <a target="_blank" class="uk-button uk-button-primary" href="download/plot">Download PLoT from Windows Store</a>
+				  
 				</center>
 				   <p>
 				   <b>Platform: </b>Windows 8 or above (PC)<br>
 				   <b>DISCLAIMER: </b>The app/server/author do not hold any responsibility over the content shared through this service.</p>
-			  		
+			   </div>
+
+                <div class="uk-width-medium-1-2">
+                    <h1>PLoT</h1>
+					
+					<h3>Description</h3>
+<p>
+          PLoT is a virtual team space, where the conventional way of sharing files is replaced with vector mapping of files to make it faster and even more secure to use while using much lesser space at the same time.
+          PLoT provides it's users with one of the secure platforms available out there for team collaboration with the best in house features like Geo-Fencing, Network-Fencing, Device Restriction etc. Using Device Restriction feature, the user can restrict the usage to the only registered device associated with a user. i.e. "One User Account, One Device."
+        Reducing the junk files has been the core idea of PLoT with its user as well as server friendly features making it one of the best available application for file management and the preferred options for organizations.
+</p>
+<p>
+<b>Disclaimer:</b> CyberKnights are not responsible for any misuse of features and shall hold no responsibility over any misleading invites or files sent through PLoT.
+</p>
+					
+					
                 </div>
 
                </div>
-			   <hr class="uk-grid-divider">
-         <br><br><br>  
-			   <div class="uk-grid" data-uk-grid-margin="">
                 <div class="uk-width-medium-1-2 uk-row-first">
                     <img src="assets/apps/hlin.png" alt="" height="400" width="660">
 				<center>   
