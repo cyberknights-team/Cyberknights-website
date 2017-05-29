@@ -65,7 +65,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
    
-document.getElementById('share').onclick = function() {
+function share () {
 
   FB.ui({
     method: 'share',
@@ -76,6 +76,8 @@ document.getElementById('share').onclick = function() {
   }, function(response){});
 
 }
+
+$("button").on( "click touchstart", share );
    
 </script>
 <br><br><br>
