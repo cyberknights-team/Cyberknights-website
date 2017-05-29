@@ -1,4 +1,5 @@
 <html>
+<title>PanaBday</title>
 <body>
 
 
@@ -25,7 +26,7 @@ function myFunction() {
   FB.ui({
     method: 'share',
     display: 'popup',
-    href: 'https://developers.facebook.com/docs/',
+    href: 'cyberknights.in/pana',
 	hashtag : '#PanaBday',
   }, function(response){});
 
