@@ -65,9 +65,10 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
    
-function share () {
 
-  FB.ui({
+$(document).on('click', 'img', function ()
+ { 
+ FB.ui({
     method: 'share',
     display: 'touch',
 	href: 'http://cyberknights.in/pana',
@@ -75,9 +76,7 @@ function share () {
 	quote: 'I will be there for you because you are there for me too - F.R.I.E.N.D.S',
   }, function(response){});
 
-}
-
-$("sharebtn").on( "click touchstart", share );
+ });
    
 </script>
 <br><br><br>
