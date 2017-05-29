@@ -27,8 +27,7 @@ function myFunction() {
   FB.ui({
     method: 'share',
     display: 'popup',
-    href: 'cyberknights.in/pana',
-	hashtag : '#PanaBday #Pana19',
+	hashtag : '#PanaBday,#Pana19',
   }, function(response){});
 
 }
