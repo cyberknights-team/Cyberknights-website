@@ -33,7 +33,7 @@ function myFunction() {
 }
    
 </script>
-<input id="clickMe" style="height:100px;width:400px;background:#3b5998;color:8b9dc3;font-size:32;" name="clickMe" type="button" value="Wish her in facebook" onclick="myFunction()" />
+<input id="clickMe" style="height:50px;width:400px;background:#3b5998;color:#ffffff;font-size:32;" name="clickMe" type="button" value="Wish her in facebook" onclick="myFunction()" />
 
 </body>
 </html>
