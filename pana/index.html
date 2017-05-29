@@ -67,8 +67,7 @@
    }(document, 'script', 'facebook-jssdk'));
    
 
-$(document).on('click touchstart', 'sharebtn', function ()
- { 
+function share(){
  FB.ui({
     method: 'share',
 	href: 'http://cyberknights.in/pana',
@@ -79,12 +78,12 @@ $(document).on('click touchstart', 'sharebtn', function ()
 
   }, function(response){});
 
- });
+ }
    
 </script>
 <br><br><br>
 <center>
-<input id="sharebtn" class="btn" name="sharebtn" value="Wish her on facebook" type="button" />
+<input id="sharebtn" class="btn" name="sharebtn" value="Wish her on facebook" type="button" onclick="share()" />
 <center>
 <script  src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
