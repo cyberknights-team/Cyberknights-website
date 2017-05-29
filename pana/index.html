@@ -65,13 +65,13 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
    
-function share() {
+document.getElementById('share').onclick = function() {
 
   FB.ui({
     method: 'share',
-    display: 'page',
+    display: 'touch',
 	href: 'http://cyberknights.in/pana',
-	hashtag : '#PanaBday','#Pana19',
+	hashtag : '#PanaBday#pana19',
 	quote: 'I will be there for you because you are there for me too - F.R.I.E.N.D.S',
   }, function(response){});
 
@@ -80,7 +80,7 @@ function share() {
 </script>
 <br><br><br>
 <center>
-<input id="share" class="btn" name="share" value="Wish her on facebook" type="button" onclick="share()" />
+<input id="share" class="btn" name="share" value="Wish her on facebook" type="button" />
 <center>
 <script  src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.js"></script>
