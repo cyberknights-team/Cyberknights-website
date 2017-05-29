@@ -27,7 +27,7 @@ function myFunction() {
     method: 'share',
     display: 'popup',
     href: 'cyberknights.in/pana',
-	hashtag : '#PanaBday',
+	hashtag : '#PanaBday #Pana19',
   }, function(response){});
 
 }
