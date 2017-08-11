@@ -2724,16 +2724,19 @@
 		}
 
 	#header {
+		background:#000000;
 		color: #d4e0ef;
 		cursor: default;
-		height: 3.25em;
+		height: 5em;
 		left: 0;
-		line-height: 3.25em;
-		position: absolute;
+		line-height: 5em;
+		position: fixed;
 		text-align: right;
-		top: 4em;
 		width: 100%;
 		z-index: 10001;
+	}
+	#mainNav{
+		top: 1em;
 	}
 
 		#header .inner {
