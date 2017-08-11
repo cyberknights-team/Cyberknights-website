@@ -1655,7 +1655,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #5385c1;
+		color: #000000;
 		font-weight: 300;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
@@ -2716,7 +2716,7 @@
 	}
 
 		.subpage #header {
-			background: #5385c1;
+			background: #000000;
 			top: 0;
 			height: 44px;
 			line-height: 44px;
@@ -2933,6 +2933,7 @@
 /* Banner */
 
 	#banner {
+
 		padding: 12em 0 12em 0;
         background-color: black;
 		background-size: cover;
@@ -2940,7 +2941,6 @@
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		text-align: center;
-		border-top: 0.5em solid #5385c1;
 	}
 
 		#banner h1 {
