@@ -1805,7 +1805,7 @@
 		}
 
 		section.wrapper.style1, article.wrapper.style1 {
-			background: #5385c1;
+			background: #000000;
 			color: #bacee6;
 		}
 
@@ -2933,8 +2933,8 @@
 /* Banner */
 
 	#banner {
-		padding: 12em 0 10em 0;
-		background-image: url('../../images/banner.jpg');
+		padding: 12em 0 12em 0;
+        background-color: black;
 		background-size: cover;
 		background-position: top;
 		background-attachment: fixed;
@@ -3008,6 +3008,7 @@
 
 /* Footer */
 
+
 	#footer .inner {
 		border-top: 1px solid #dbdbdb;
 		padding-top: 3em;
@@ -3021,7 +3022,7 @@
 	}
 
 		#footer .copyright a {
-			color: #bbb;
+			color: #000000;
 			text-decoration: none;
 		}
 
