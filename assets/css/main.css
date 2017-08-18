@@ -216,6 +216,8 @@
 
 	}
 
+	
+	
 /* Grid */
 
 	.row {
@@ -2738,6 +2740,16 @@
 	#mainNav{
 		top: 1em;
 	}
+	
+	#loginForm{
+    height: 20em;
+    width: 20em; 
+	}
+	
+	#loginFormContainer{
+		padding:12em;
+	}
+
 
 		#header .inner {
 			margin: 0 auto;
