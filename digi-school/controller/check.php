@@ -1,7 +1,7 @@
 <?php
 
-	echo $_POST["username"] + \n ;
-	echo $_POST["password"];	
+	echo $_POST['username'] + \n ;
+	echo $_POST['password'];	
 
 
 ?>
