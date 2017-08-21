@@ -296,7 +296,7 @@ else if ($_GET['div']== "showFeedbacks"){
 						<div class="col-md-12">
 							<div class="card">
 								<div class="header">						
-									<h4 class="title">Materials</h4>
+									<h4 class="title">Show Feedback</h4>
 									<p class="category"></p>
 								</div>
                             <div class="content table-responsive table-full-width">
@@ -478,6 +478,7 @@ else
 
 	<?php
 	if(isset($_GET['result'])){
+		if(isset($_GET['result'])=='y'){
 	if($_GET['div']=="feedback"){
 		echo '
 		<script type="text/javascript">
@@ -535,6 +536,26 @@ else
     	});
 		</script>';
 	}
+		}
+		else{
+			echo '
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: "pe-7s-gift",
+            	message: '.$_GET['result'].'
+
+            },{
+                type: "info",
+                timer: 2000
+            });
+
+    	});
+		</script>';
+		}
 	}
 ?>
 </html>
