@@ -8,26 +8,38 @@
 	</head>
 	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<div id="mainNav" class="inner page-scroll navbar-fixed-top">
-					<a href="#" class="logo">CyberKnights</a>
-				</div>
-			</header>
 
-		<!-- Banner -->
+
+
 			<section id="loginFormContainer">
-			<center>
+				<center>
 				<h2>Login to digi-school portal</h2>
+				<p>An CyberKnights Initiative</p>
 				<form id="loginForm" action="controller/check.php" method="post">
 					<input id="username" name="username" type="text" placeholder="Username" required />
 						<br>
-					<input id="password" name="password" type="text" maxlength="4" placeholder="Password" required />
+					<input id="password" name="password" type="text" maxlength="4" placeholder="PIN" required />
 						<br>
-					<input id="button" type="submit" value="Login"/>
+					<input id="button" class="button special" type="submit" value="Login"/>
 				</form>
 			</center>
 			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							<a href="http://www.cyberknights.in">&copy;CyberKnights</a>
+						</div>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/CyberKnightsHlin/" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+							<li><a href="https://twitter.com/CyberKnights4" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="icon fa-youtube" target="_blank"><span class="label">YouTube</span></a></li>
+							<li><a href="http://github.com/cyberknights-team/" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
 			
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>

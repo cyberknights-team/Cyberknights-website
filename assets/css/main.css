@@ -2739,20 +2739,39 @@
 	}
 	#mainNav{
 		top: 1em;
+		height: 4em;
+		background: #000000;
 	}
 	
 	#loginForm{
-    height: 100px;
-    width: 200px; 
+    width: 20em; 
 	}
 	
-	#loginFormContainer{
-	position:    absolute;
-    left:        50%;       
-    top:         50%;
-    margin-left: -200px;    
-    margin-top:  -100px;     
+
+		#loginFormContainer {
+		padding: 8em 0em 8em 0em;
+        background-color: #000000;
+		background-size: cover;
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		text-align: center;
 	}
+
+		#loginFormContainer h2 {
+			font-size: 3em;
+			font-weight: 80;
+			color: #fff;
+			line-height: 1em;
+			margin: 0 0 1em 0;
+			padding: 0;
+		}
+
+		#loginFormContainer p {
+			font-size: 1em;
+			color: rgba(255, 255, 255, 0.55);
+			margin-bottom: 1.75em;
+		}
 
 
 		#header .inner {
