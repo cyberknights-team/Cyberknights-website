@@ -1,9 +1,12 @@
 <?php
-header("Content-Length: " . filesize ('http://digischool.blob.core.windows.net/android/AD2.pdf') ); 
+$category = $_GET['category'];
+$fileName = $_GET['fileName'];
+$link = "http://digischool.blob.core.windows.net/".$category."/".$fileName;
+header("Content-Length: " . filesize ($link) ); 
 header("Content-type: application/pdf"); 
 header("Content-disposition: inline;     
-filename=".basename('AD2'));
+filename=".basename($fileName));
 header('Expires: 0');
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-$filepath = readfile('http://digischool.blob.core.windows.net/android/AD2.pdf');
+$filepath = readfile($link);
 ?>

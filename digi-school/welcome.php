@@ -187,9 +187,9 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("Size")->getValue()."</td>";
 	$category = strtolower($entity->getProperty("Category")->getValue());
-	$link = "http://digischool.blob.core.windows.net/".$category."/".$entity->getRowKey().".pdf";
+	$fileName = $entity->getProperty("FileName")->getValue();
 	echo "<center><td>
-	<a target='_blank' href='".$link."'>
+	<a target='_blank' href='controller/viewPDF.php?category=".$category."&fileName=".$fileName."'>
 	<button type='submit' class='btn btn-info btn-fill'>View</button>
 	</a>";
 	echo "</tr>";	
