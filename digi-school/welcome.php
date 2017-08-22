@@ -456,7 +456,11 @@ else
 ?>
         <footer class="footer">
             <div class="container-fluid">
-				<a href="#" class="fa fa-facebook"></a>
+							<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa-facebook" target="_blank"><span class="label">Facebook</span></a>
+							<a href="https://twitter.com/CyberKnights4" class="fa-twitter" target="_blank"><span class="label">Twitter</span></a>
+							<a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="fa-youtube" target="_blank"><span class="label">YouTube</span></a>
+							<a href="http://github.com/cyberknights-team/" class="fa-github" target="_blank"><span class="label">GitHub</span></a>
+				
                 <p class="copyright pull-right">
                     &copy;CyberKnights
                 </p>
