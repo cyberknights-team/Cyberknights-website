@@ -12,6 +12,8 @@
 
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
     <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
@@ -454,12 +456,7 @@ else
 ?>
         <footer class="footer">
             <div class="container-fluid">
-   <ul class="icons">
-							<li><a href="https://www.facebook.com/CyberKnightsHlin/" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-							<li><a href="https://twitter.com/CyberKnights4" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="icon fa-youtube" target="_blank"><span class="label">YouTube</span></a></li>
-							<li><a href="http://github.com/cyberknights-team/" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-						</ul>
+				<a href="#" class="fa fa-facebook"></a>
                 <p class="copyright pull-right">
                     &copy;CyberKnights
                 </p>
