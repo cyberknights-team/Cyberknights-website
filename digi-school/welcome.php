@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<!--Session Check-->
 	<?php include 'controller/session_check.php';?>
+	
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
@@ -12,6 +14,8 @@
 
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	
+	<!-- Social Media Icons CSS From W3School-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -317,8 +321,8 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 				<input type='text' name='password' id='password' class='form-control' placeholder='password' value=".$entity->getRowKey()." maxLength='4' required>
 			  </div></td>";
 		echo "<td><select name='role' id ='role' class='form-control'>
-					<option value='user'>User</option>
 					<option value='admin' default>Admin</option>
+					<option value='user'>User</option>
 				  </select></td>";
 		echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
 		echo "</form></tr>";	
@@ -489,49 +493,34 @@ else
 	<script src="assets/js/demo.js"></script>
 
 	<?php
+	$msg ="";
 	if(isset($_GET['result'])){
 		if(isset($_GET['result'])=='y'){
-	if($_GET['div']=="feedback"){
-		echo '
-		<script type="text/javascript">
-			$(document).ready(function(){
+			if($_GET['div']=="feedback"){
+				$msg = "Thanks for your feedback !!!";
+			}
+			else if($_GET['div']=="member"){
+				if($_GET['result']=="deletey"){
+					$msg = "Member has been Removed !!!";
+				}
+				else if($_GET['result']=="updateUserY"){
+					$msg = "Member has been Updated !!!";
+				}
+				else{
+					$msg = "Member has been Added !!!";
+				}
+		
+			}
 
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: "Thanks for your feedback !!!"
-
-            },{
-                type: "info",
-                timer: 2000
-            });
-
-    	});
-		</script>';
-	}
-	else if($_GET['div']=="member"){
-		if($_GET['result']=="deletey"){
-		echo '
-		<script type="text/javascript">
-			$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: "Member has been Removed !!!"
-
-            },{
-                type: "info",
-                timer: 2000
-            });
-
-    	});
-		</script>';
+			else if($_GET['div']=="showFeedbacks"){
+				$msg = "Feedback has been removed !!!"
+			}
 		}
 		else{
-		echo '
+			$msg = $_GET['result'];
+		}
+	}
+	echo '
 		<script type="text/javascript">
 			$(document).ready(function(){
 
@@ -539,7 +528,7 @@ else
 
         	$.notify({
             	icon: "pe-7s-gift",
-            	message: "Member has been added !!!"
+            	message: '.$msg.'
 
             },{
                 type: "info",
@@ -548,48 +537,5 @@ else
 
     	});
 		</script>';
-		}
-	}
-
-	else if($_GET['div']=="showFeedbacks"){
-		echo '
-		<script type="text/javascript">
-			$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: "Feedback has been removed !!!"
-
-            },{
-                type: "info",
-                timer: 2000
-            });
-
-    	});
-		</script>';
-	}
-		}
-		else{
-			echo '
-		<script type="text/javascript">
-			$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: '.$_GET['result'].'
-
-            },{
-                type: "info",
-                timer: 2000
-            });
-
-    	});
-		</script>';
-		}
-	}
 ?>
 </html>
