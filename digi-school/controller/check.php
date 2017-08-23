@@ -17,7 +17,7 @@ try    {
     $result = $tableRestProxy->getEntity("users", $username, $password);
 }
 catch(ServiceException $e){
-	header("Location: ../");
+	header("Location: ../index.php?result=n");
 	
 }
 
