@@ -97,20 +97,7 @@
                         <p>Show Feedbacks</p>
                     </a>
                 </li>';
-				if(isset($_GET['div'])){
-				  if($_GET['div']=="Remove User")
-				    echo '<li class="active">';
-			     else
-				    echo '<li>';
-				}
-				else
-				echo '<li>';
-				echo '
-                    <a href="welcome.php?div=removeUser">
-                        <i class="pe-7s-delete-user"></i>
-                        <p>Remove Member</p>
-                    </a>
-                </li>';
+				
 			}
 			else{
 				if(isset($_GET['div'])){				
