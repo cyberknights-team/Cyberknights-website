@@ -262,8 +262,8 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Username</th>
-                                    	<th>Pin</th>
-										<th>Role</th>											
+                                    	<th>Pin (Max-Length:4)</th>
+										<th>Role (Member Access)</th>											
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
@@ -303,8 +303,8 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Username</th>
-                                    	<th>Pin</th>
-										<th>Role</th>
+                                    	<th>Pin (Max-Length:4)</th>
+										<th>Role (Member Access)</th>
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
