@@ -16,20 +16,7 @@
 	
 	if(isset($_GET['result'])){
 	echo '<script type="text/javascript">
-			$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: '.$_GET['result'].'
-
-            },{
-                type: "info",
-                timer: 2000
-            });
-
-    	});
+			alert("Login Denied");
 		</script>';
 	}
 ?>
