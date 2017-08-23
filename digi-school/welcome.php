@@ -241,6 +241,24 @@ else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
                                 </form>
                             </div>
                         </div>
+						<div class="card">
+                            <div class="header">
+                                <h4 class="title">Remove Member</h4>
+                            </div>
+                            <div class="content">
+                                <form action="controller/delete.php" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required><br>
+                                            </div>
+                                        </div>                                      
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Remove Member</button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
 							
 					<div class="col-md-12">
                         <div class="card">
