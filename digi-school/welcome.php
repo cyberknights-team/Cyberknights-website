@@ -227,8 +227,8 @@ else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" name="username" id="username" class="form-control" placeholder="Username"><br>
-												<input type="text" name="password" id="password" class="form-control" placeholder="PIN"><br>
+                                                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required><br>
+												<input type="text" name="password" id="password" class="form-control" placeholder="PIN" required><br>
 												 <select name="role" id ="role" class="form-control">
 													<option value="user" default>User</option>
 													<option value="admin">Admin</option>
@@ -390,9 +390,9 @@ else if($_GET['div']== "feedback"){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-												<input type="text"  name="event" id="event" class="form-control" placeholder="Event"/>
+												<input type="text"  name="event" id="event" class="form-control" placeholder="Event" required/>
                                                 <br>
-												<textarea name="feedback" id="feedback" rows="4" cols="50" class="form-control" placeholder="Feedback"></textarea>
+												<textarea name="feedback" id="feedback" rows="4" cols="50" class="form-control" placeholder="Feedback" required></textarea>
                                             </div>
                                         </div>                                      
                                     </div>
@@ -423,7 +423,7 @@ else if($_GET['div']== "removeUser"){
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <input type="text" name="username" id="username" class="form-control" placeholder="Username"><br>
+                                                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required><br>
                                             </div>
                                         </div>                                      
                                     </div>
