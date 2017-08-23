@@ -101,6 +101,20 @@
                         <p>Show Feedbacks</p>
                     </a>
                 </li>';
+				if(isset($_GET['div'])){
+				  if($_GET['div']=="upload")
+				    echo '<li class="active">';
+			     else
+				    echo '<li>';
+				}
+				else
+				echo '<li>';
+				echo '
+                    <a href="welcome.php?div=upload">
+                        <i class="pe-7s-cloud-upload"></i>
+                        <p>Upload</p>
+                    </a>
+                </li>';
 				
 			}
 			else{
@@ -196,6 +210,7 @@ foreach($entities as $entity){
 	echo "<center><td>
 	<a target='_blank' href='controller/viewPDF.php?category=".$category."&fileName=".$fileName."'>
 	<button type='submit' class='btn btn-info btn-fill'>View</button>
+	<br>
 	</a>";
 	echo "</tr>";	
 }                         
@@ -261,9 +276,9 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Member Username</th>
-                                    	<th>Pin (Max-Length:4)</th>
-										<th>Role (Member Access)</th>											
+                                        <th>Username</th>
+                                    	<th>Pin</th>
+										<th>Role</th>											
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
@@ -302,9 +317,9 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Member Username</th>
-                                    	<th>Pin (Max-Length:4)</th>
-										<th>Role (Member Access)</th>
+                                        <th>Username</th>
+                                    	<th>Pin</th>
+										<th>Role</th>
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
@@ -418,6 +433,7 @@ foreach($entities as $entity){
 		
 echo '</tbody></table></div></div></div></div></div></div>';
 }
+
 else if($_GET['div']== "feedback"){
 	echo '
         <div class="content">
@@ -441,6 +457,66 @@ else if($_GET['div']== "feedback"){
                                         </div>                                      
                                     </div>
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Send Feedback</button>
+                                    <div class="clearfix"></div>
+                                </form>
+								
+                            </div>
+						
+                        </div>
+					</div>
+				</div>
+			</div>
+		';
+}
+else if($_GET['div']== "upload"){
+	echo '
+        <div class="content">
+            <div class="container-fluid"> 
+                <div class="row">
+				  <div class="card">
+                            <div class="header">
+                                <h4 class="title">Upload Files</h4>
+                            </div>
+
+                            <div class="content">
+							
+                                <form action="controller/uploadSoftware.php" method="POST"  enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+												<input type="text"  name="category" id="category" class="form-control" placeholder="Category" required/>
+                                                <br>
+												<textarea name="contains" id="contains" rows="4" cols="50" class="form-control" placeholder="Contains" required></textarea>
+                                            </div>
+                                        </div>                                      
+                                    </div>
+									<input type="file"  name="file" id="file" required/>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Upload</button>
+                                    <div class="clearfix"></div>
+                                </form>
+								
+                            </div>
+						
+                        </div>
+						<div class="card">
+                            <div class="header">
+                                <h4 class="title">Upload Software</h4>
+                            </div>
+
+                            <div class="content">
+							
+                                <form action="controller/uploadSoftware.php" method="POST"  enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+												<input type="text"  name="category" id="category" class="form-control" placeholder="Category" required/>
+                                                <br>
+												<textarea name="contains" id="contains" rows="4" cols="50" class="form-control" placeholder="Contains" required></textarea>
+                                            </div>
+                                        </div>                                      
+                                    </div>
+									<input type="file"  name="file" id="file" required/>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Upload</button>
                                     <div class="clearfix"></div>
                                 </form>
 								
