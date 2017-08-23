@@ -62,7 +62,7 @@
 			else
 				echo '<li class="active">';
                    echo' <a href="welcome.php?div=software">
-                        <i class="pe-7s-paint-bucket"></i>
+                        <i class="pe-7s-graph"></i>
                         <p>Materials</p>
                     </a>
                 </li>';	
@@ -211,7 +211,7 @@ foreach($entities as $entity){
 		
 echo '</tbody></table></div></div></div></div></div></div>';
 }
-else if($_GET['div']== "software"){
+/*else if($_GET['div']== "software"){
 		include 'controller/getAllSoftware.php';
 			echo '
 			<div class="content">
@@ -241,14 +241,14 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getRowKey())."</td>";
 	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
 	echo "<center><td>
-	<a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey())."'>
+	<a target='_blank' href='http://digischool.blob.core.windows.net/".."'>
 	<button type='submit' class='btn btn-info btn-fill'>Download</button>
 	</a>";
 	echo "</tr>";	
 }                         
 		
 echo '</tbody></table></div></div></div></div></div></div>';
-}
+}*/
 else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
 	include 'controller/getAllUsers.php';
 	echo '
