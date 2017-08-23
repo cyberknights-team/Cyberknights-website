@@ -513,7 +513,7 @@ else
 			}
 
 			else if($_GET['div']=="showFeedbacks"){
-				$msg = "Feedback has been removed !!!"
+				$msg = "Feedback has been removed !!!";
 			}
 		}
 		else{
