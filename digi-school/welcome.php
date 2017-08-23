@@ -370,7 +370,7 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("event")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("feedback")->getValue()."</td>";
-	echo "<td><a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey()."'>
+	echo "<td><a target='_blank' href='controller/deleteFeedback.php?partition=".$entity->getPartitionKey()."&rowkey=".$entity->getRowKey()."'>
 	<button type='submit' class='btn btn-info btn-fill'>Delete</button>
 	</a></td>";
 	echo "</tr>";	
@@ -588,6 +588,25 @@ else
         	$.notify({
             	icon: "pe-7s-gift",
             	message: "Member has been removed !!!"
+
+            },{
+                type: "info",
+                timer: 2000
+            });
+
+    	});
+		</script>';
+	}
+	else if($_GET['div']=="feedback"){
+		echo '
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: "pe-7s-gift",
+            	message: "Feedback has been removed !!!"
 
             },{
                 type: "info",
