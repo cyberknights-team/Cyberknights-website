@@ -80,7 +80,7 @@
 				echo '
                     <a href="welcome.php?div=addUser">
                         <i class="pe-7s-user"></i>
-                        <p>Add User</p>
+                        <p>Add Member</p>
                     </a>
                 </li>';
 				if(isset($_GET['div'])){
@@ -108,7 +108,7 @@
 				echo '
                     <a href="welcome.php?div=removeUser">
                         <i class="pe-7s-delete-user"></i>
-                        <p>Remove User</p>
+                        <p>Remove Member</p>
                     </a>
                 </li>';
 			}
@@ -236,7 +236,7 @@ else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
                                             </div>
                                         </div>                                      
                                     </div>
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Add User</button>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Add Member</button>
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
@@ -427,7 +427,7 @@ else if($_GET['div']== "removeUser"){
                                             </div>
                                         </div>                                      
                                     </div>
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Remove User</button>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Remove Member</button>
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
