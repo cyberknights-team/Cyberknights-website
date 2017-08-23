@@ -53,7 +53,19 @@
                         <p>Materials</p>
                     </a>
                 </li>';	
-			
+			if(isset($_GET['div'])){
+			if($_GET['div']=="software")
+				echo '<li class="active">';
+			else
+				echo '<li>';
+			}
+			else
+				echo '<li class="active">';
+                   echo' <a href="welcome.php?div=software">
+                        <i class="pe-7s-graph"></i>
+                        <p>Materials</p>
+                    </a>
+                </li>';	
 			
 			
 			if(isset($_SESSION['admin'])){
@@ -199,7 +211,44 @@ foreach($entities as $entity){
 		
 echo '</tbody></table></div></div></div></div></div></div>';
 }
+else if($_GET['div']== "software"){
+		include 'controller/getAllSoftware.php';
+			echo '
+			<div class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="header">						
+									<h4 class="title">Materials</h4>
+									<p class="category"></p>
+								</div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+										<th>Category</th>
+										<th>Software Kit</th>
+										<th>Contains</th>
+										<th>Options</th>
+                                    </thead>
+                                    <tbody>';
+	
 
+
+foreach($entities as $entity){
+	echo "<tr>";
+	echo "<td>".$entity->getPartitionKey()."</td>";
+	echo "<td>".$entity->getRowKey())."</td>";
+	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
+	echo "<center><td>
+	<a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey())."'>
+	<button type='submit' class='btn btn-info btn-fill'>Download</button>
+	</a>";
+	echo "</tr>";	
+}                         
+		
+echo '</tbody></table></div></div></div></div></div></div>';
+}
 else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
 	include 'controller/getAllUsers.php';
 	echo '
@@ -456,10 +505,10 @@ else
 ?>
         <footer class="footer">
             <div class="container-fluid">
-							<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa-facebook" target="_blank">Facebook</a>
-							<a href="https://twitter.com/CyberKnights4" class="fa-twitter" target="_blank">Twitter</a>
-							<a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="fa-youtube" target="_blank">YouTube</a>
-							<a href="http://github.com/cyberknights-team/" class="fa-github" target="_blank">GitHub</a>
+							<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa facebook" target="_blank"></a>
+							<a href="https://twitter.com/CyberKnights4" class="fa twitter" target="_blank"></a>
+							<a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="fa youtube" target="_blank"></a>
+							<a href="http://github.com/cyberknights-team/" class="fa github" target="_blank"></a>
 				
                 <p class="copyright pull-right">
                     <a href="www.cyberknights.in">&copy;CyberKnights</a>
