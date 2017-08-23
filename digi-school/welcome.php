@@ -63,7 +63,7 @@
 				echo '<li class="active">';
                    echo' <a href="welcome.php?div=software">
                         <i class="pe-7s-graph"></i>
-                        <p>Materials</p>
+                        <p>Software</p>
                     </a>
                 </li>';	
 			
@@ -205,49 +205,13 @@ foreach($entities as $entity){
 	echo "<center><td>
 	<a target='_blank' href='controller/viewPDF.php?category=".$category."&fileName=".$fileName."'>
 	<button type='submit' class='btn btn-info btn-fill'>View</button>
-	</a></center></td>";
+	</a>";
 	echo "</tr>";	
 }                         
 		
 echo '</tbody></table></div></div></div></div></div></div>';
 }
-else if($_GET['div']== "software"){
-		include 'controller/getAllSoftware.php';
-			echo '
-			<div class="content">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="card">
-								<div class="header">						
-									<h4 class="title">Software</h4>
-									<p class="category"></p>
-								</div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-										<th>Category</th>
-										<th>Software Kit</th>
-										<th>Contains</th>
-										<th>Options</th>
-                                    </thead>
-                                    <tbody>';
-	
 
-
-foreach($entities as $entity){
-	echo "<tr>";
-	echo "<td>".$entity->getPartitionKey()."</td>";
-	echo "<td>".$entity->getRowKey())."</td>";
-	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
-	echo "<td><a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey()."'>
-	<button type='submit' class='btn btn-info btn-fill'>Download</button>
-	</a></td>";
-	echo "</tr>";	
-}                         
-		
-echo '</tbody></table></div></div></div></div></div></div>';
-}
 else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
 	include 'controller/getAllUsers.php';
 	echo '
