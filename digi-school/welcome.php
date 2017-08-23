@@ -274,10 +274,10 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 	echo "<td><div class='form-group'>
 	<input type='text' name='password' id='password' maxlength='4' class='form-control' placeholder='password' value=".$entity->getRowKey()." required>
      </div></td>";
-	echo '<td><select name="role" id ="role" class="form-control">
-				<option value="user" default>User</option>
-				<option value="admin">Admin</option>
-		</select></td>';
+	echo "<td><select name='role' id ='role' class='form-control'>
+				<option value='user' default>User</option>
+				<option value='admin'>Admin</option>
+		</select></td>";
 	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
 	echo "</form></tr>";	
 	}
@@ -304,21 +304,24 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                     </thead>
 									<tbody>';
 	foreach($entities as $entity){
-	echo "<tr><form action= 'controller/updateUser.php' method='POST'>";
-	echo "<input type='hidden' name='partition' value='".$entity->getPartitionKey()."' />";
-	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
-	echo "<td><div class='form-group'>
-	<input type='text' name='username' id='username' class='form-control' placeholder='Username' value=".$entity->getPartitionKey()." required>
-     </div></td>";
-	echo "<td><div class='form-group'>
-	<input type='text' name='password' id='password' class='form-control' placeholder='password' value=".$entity->getRowKey()." maxLength='4' required>
-     </div></td>";
-	echo '<td><select name="role" id ="role" class="form-control">
-				<option value="user">User</option>
-				<option value="admin" default>Admin</option>
-		</select></td>';
-	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
-	echo "</form></tr>";	
+	if($entity->getProperty("role")->getValue()=="admin"){
+		echo "<tr><form action= 'controller/updateUser.php' method='POST'>";
+		echo "<input type='hidden' name='partition' value='".$entity->getPartitionKey()."' />";
+		echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
+		echo "<td>
+		       <div class='form-group'>
+				<input type='text' name='username' id='username' class='form-control' placeholder='Username' value=".$entity->getPartitionKey()." required>
+			   </div>
+			  </td>";
+		echo "<td><div class='form-group'>
+				<input type='text' name='password' id='password' class='form-control' placeholder='password' value=".$entity->getRowKey()." maxLength='4' required>
+			  </div></td>";
+		echo "<td><select name='role' id ='role' class='form-control'>
+					<option value='user'>User</option>
+					<option value='admin' default>Admin</option>
+				  </select></td>";
+		echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
+		echo "</form></tr>";	
 	}
 } 
 									echo '</tbody>
