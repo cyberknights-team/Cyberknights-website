@@ -11,7 +11,7 @@ $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connection
 
 try    {
     // Delete entity.
-    $tableRestProxy->deleteEntity("feedback", $_GET['partition'] ,$_GET['rowkey');
+    $tableRestProxy->deleteEntity("feedback", $_GET['partition'] ,$_GET['rowkey']);
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.
