@@ -331,7 +331,7 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
 	echo "<center><td>
-	<a target='_blank' href='#'>
+	<a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey()."'>
 	<button type='submit' class='btn btn-info btn-fill'>Download</button>
 	</a>";
 	echo "</tr>";	
