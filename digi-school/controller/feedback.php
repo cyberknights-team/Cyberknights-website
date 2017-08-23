@@ -22,7 +22,7 @@ $entity = new Entity();
 $entity->setPartitionKey($username);
 $entity->setRowKey($date);
 $entity->addProperty("event", null,$event);
-$entity->addProperty("feedback", null,$event);
+$entity->addProperty("feedback", null,$feedback);
 
 try{
     $tableRestProxy->insertEntity("feedback", $entity);
