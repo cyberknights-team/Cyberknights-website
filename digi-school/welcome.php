@@ -207,7 +207,7 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                 <div class="row">
 				  <div class="card">
                             <div class="header">
-                                <h4 class="title">Add Members</h4>
+                                <h4 class="title">Add Member</h4>
                             </div>
                             <div class="content">
                                 <form action="controller/register.php" method="POST">
@@ -225,6 +225,7 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                     </div>
                                     <button type="submit" class="btn btn-info btn-fill pull-right">Add Member</button>
                                     <div class="clearfix"></div>
+                                </form>
                                 </form>
                             </div>
                         </div>
