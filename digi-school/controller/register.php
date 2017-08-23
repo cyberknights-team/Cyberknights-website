@@ -23,7 +23,7 @@ $entity->addProperty("role", null,$role);
 
 try{
     $tableRestProxy->insertEntity("users", $entity);
-	header("Location:../welcome.php?div=addUser&result=y");
+	header("Location:../welcome.php?div=member&result=addy"); 
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.

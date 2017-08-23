@@ -70,7 +70,7 @@
 			
 			if(isset($_SESSION['admin'])){
 				if(isset($_GET['div'])){
-				  if($_GET['div']=="addUser")
+				  if($_GET['div']=="member")
 				    echo '<li class="active">';
 			     else
 				    echo '<li>';
@@ -78,9 +78,9 @@
 				else
 				echo '<li>';
 				echo '
-                    <a href="welcome.php?div=addUser">
+                    <a href="welcome.php?div=member">
                         <i class="pe-7s-user"></i>
-                        <p>Add Member</p>
+                        <p>Members</p>
                     </a>
                 </li>';
 				if(isset($_GET['div'])){
@@ -212,7 +212,7 @@ foreach($entities as $entity){
 echo '</tbody></table></div></div></div></div></div></div>';
 }
 
-else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
+else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 	include 'controller/getAllUsers.php';
 	echo '
         <div class="content">
@@ -430,90 +430,7 @@ else if($_GET['div']== "feedback"){
 			</div>
 		';
 }
-else if($_GET['div']== "removeUser"){
-	include 'controller/getAllUsers.php';
-	echo '
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-				  <div class="card">
-                            <div class="header">
-                                <h4 class="title">Remove Member</h4>
-                            </div>
-                            <div class="content">
-                                <form action="controller/delete.php" method="POST">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <input type="text" name="username" id="username" class="form-control" placeholder="Username" required><br>
-                                            </div>
-                                        </div>                                      
-                                    </div>
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Remove Member</button>
-                                    <div class="clearfix"></div>
-                                </form>
-                            </div>
-                        </div>
-							
-					<div class="col-md-12">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Users</h4>
-                                <p class="category"></p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>Username</th>
-                                    	<th>Pin</th>											
-                                    </thead>
-									<tbody>';
-	foreach($entities as $entity){
-	if($entity->getProperty("role")->getValue()=="user"){
-	echo "<tr>";
-	echo "<td>".$entity->getPartitionKey()."</td>";
-	echo "<td>".$entity->getRowKey()."</td>";
-	echo "</tr>";	
-	}
-} 
-									echo '</tbody>
-                                </table>
 
-                            </div>
-                        </div>
-                    </div>
-					<div class="col-md-12">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Admins</h4>
-                                <p class="category"></p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead>
-                                        <th>Username</th>
-                                    	<th>Pin</th>											
-                                    </thead>
-									<tbody>';
-	foreach($entities as $entity){
-	if($entity->getProperty("role")->getValue()=="admin"){
-	echo "<tr>";
-	echo "<td>".$entity->getPartitionKey()."</td>";
-	echo "<td>".$entity->getRowKey()."</td>";
-	echo "</tr>";	
-	}
-} 
-									echo '</tbody>
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-				
-            </div>
-        </div>';
-}
 else if($_GET['div']== "logout"){
 session_start();
 session_destroy();
@@ -577,7 +494,27 @@ else
     	});
 		</script>';
 	}
-	else if($_GET['div']=="addUser"){
+	else if($_GET['div']=="member"){
+		if($_GET['result']=="deletey"){
+		echo '
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: "pe-7s-gift",
+            	message: "Member has been Removed !!!"
+
+            },{
+                type: "info",
+                timer: 2000
+            });
+
+    	});
+		</script>';
+		}
+		else{
 		echo '
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -595,26 +532,9 @@ else
 
     	});
 		</script>';
+		}
 	}
-	else if($_GET['div']=="removeUser"){
-		echo '
-		<script type="text/javascript">
-			$(document).ready(function(){
 
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: "pe-7s-gift",
-            	message: "Member has been removed !!!"
-
-            },{
-                type: "info",
-                timer: 2000
-            });
-
-    	});
-		</script>';
-	}
 	else if($_GET['div']=="showFeedbacks"){
 		echo '
 		<script type="text/javascript">

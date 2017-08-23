@@ -46,6 +46,6 @@ catch(ServiceException $e){
 	}
 }
 
-header("Location:../welcome.php?div=removeUser&result=y")
+header("Location:../welcome.php?div=member&result=deletey")
 	
 ?>
