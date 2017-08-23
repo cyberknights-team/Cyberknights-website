@@ -513,7 +513,7 @@ else
 							<a href="http://github.com/cyberknights-team/" class="fa fa-github" target="_blank"></a>
 			</p>
                 <p class="copyright pull-right">
-                    <a href="www.cyberknights.in">&copy;CyberKnights</a>
+                    <a href="http://www.cyberknights.in">&copy;CyberKnights</a>
                 </p>
             </div>
         </footer>
