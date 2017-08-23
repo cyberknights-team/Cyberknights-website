@@ -358,6 +358,7 @@ else if ($_GET['div']== "showFeedbacks"){
 										<th>Date</th>
                                         <th>Event</th>
 										<th>Feedback</th>
+										<th>Options</th>
                                     </thead>
                                     <tbody>';
 	
@@ -369,6 +370,9 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("event")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("feedback")->getValue()."</td>";
+	echo "<td><a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey()."'>
+	<button type='submit' class='btn btn-info btn-fill'>Delete</button>
+	</a></td>";
 	echo "</tr>";	
 }                         
 		
@@ -377,7 +381,7 @@ echo '</tbody></table></div></div></div></div></div></div>';
 else if($_GET['div']== "feedback"){
 	echo '
         <div class="content">
-            <div class="container-fluid">
+            <div class="container-fluid"> 
                 <div class="row">
 				  <div class="card">
                             <div class="header">
