@@ -503,7 +503,7 @@ else
 				if($_GET['result']=="deletey"){
 					$msg = "Member has been Removed !!!";
 				}
-				else if($_GET['result']=="updateUserY"){
+				else if($_GET['result']=="updateUsery"){
 					$msg = "Member has been Updated !!!";
 				}
 				else{
