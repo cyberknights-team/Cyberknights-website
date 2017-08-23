@@ -519,8 +519,7 @@ else
 		else{
 			$msg = $_GET['result'];
 		}
-	}
-	echo '
+		echo '
 		<script type="text/javascript">
 			$(document).ready(function(){
 
@@ -537,5 +536,7 @@ else
 
     	});
 		</script>';
+	}
+	
 ?>
 </html>
