@@ -12,7 +12,7 @@
 
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
@@ -506,10 +506,10 @@ else
 ?>
         <footer class="footer">
             <div class="container-fluid">
-							<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa facebook" target="_blank"></a>
-							<a href="https://twitter.com/CyberKnights4" class="fa twitter" target="_blank"></a>
-							<a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="fa youtube" target="_blank"></a>
-							<a href="http://github.com/cyberknights-team/" class="fa github" target="_blank"></a>
+							<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa fa-facebook" target="_blank"></a>
+							<a href="https://twitter.com/CyberKnights4" class="fa fa-twitter" target="_blank"></a>
+							<a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="fa fa-youtube" target="_blank"></a>
+							<a href="http://github.com/cyberknights-team/" class="fa fa-github" target="_blank"></a>
 				
                 <p class="copyright pull-right">
                     <a href="www.cyberknights.in">&copy;CyberKnights</a>
