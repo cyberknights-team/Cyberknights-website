@@ -46,6 +46,6 @@ catch(ServiceException $e){
 	}
 }
 
-header("Location:../welcome.php?div=feedback&result=y")
+header("Location:../welcome.php?div=showFeedbacks&result=y");
 	
 ?>

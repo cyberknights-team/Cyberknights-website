@@ -370,7 +370,7 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("event")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("feedback")->getValue()."</td>";
-	echo "<td><a target='_blank' href='controller/deleteFeedback.php?partition=".$entity->getPartitionKey()."&rowkey=".$entity->getRowKey()."'>
+	echo "<td><a href='controller/deleteFeedback.php?partition=".$entity->getPartitionKey()."&rowkey=".$entity->getRowKey()."'>
 	<button type='submit' class='btn btn-info btn-fill'>Delete</button>
 	</a></td>";
 	echo "</tr>";	
@@ -597,7 +597,7 @@ else
     	});
 		</script>';
 	}
-	else if($_GET['div']=="feedback"){
+	else if($_GET['div']=="showFeedbacks"){
 		echo '
 		<script type="text/javascript">
 			$(document).ready(function(){
