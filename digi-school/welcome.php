@@ -506,12 +506,13 @@ else
 ?>
         <footer class="footer">
             <div class="container-fluid">
-							<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa fa-facebook" target="_blank"></a>
+							
+				
+                <p class="copyright pull-right">
+				<a href="https://www.facebook.com/CyberKnightsHlin/" class="fa fa-facebook" target="_blank"></a>
 							<a href="https://twitter.com/CyberKnights4" class="fa fa-twitter" target="_blank"></a>
 							<a href="https://www.youtube.com/channel/UC3509mOLV67pDqpJOgQ8euQ" class="fa fa-youtube" target="_blank"></a>
 							<a href="http://github.com/cyberknights-team/" class="fa fa-github" target="_blank"></a>
-				
-                <p class="copyright pull-right">
                     <a href="www.cyberknights.in">&copy;CyberKnights</a>
                 </p>
             </div>
