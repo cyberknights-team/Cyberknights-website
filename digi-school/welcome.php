@@ -261,7 +261,7 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Username</th>
+                                        <th>Member Username</th>
                                     	<th>Pin (Max-Length:4)</th>
 										<th>Role (Member Access)</th>											
 										<th>Options</th>										
@@ -302,7 +302,7 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Username</th>
+                                        <th>Member Username</th>
                                     	<th>Pin (Max-Length:4)</th>
 										<th>Role (Member Access)</th>
 										<th>Options</th>										
