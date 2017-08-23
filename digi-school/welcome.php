@@ -282,8 +282,9 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 				<option value='user' default>User</option>
 				<option value='admin'>Admin</option>
 		</select></td>";
-	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
-	echo "</form></tr>";	
+	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></form>
+	<a href='controller/deleteUser.php?partition=".$entity->getPartitionKey()."&rowkey=".$entity->getRowKey()."'><button type='submit' class='btn btn-info btn-fill'>Delete</button></a></td>";
+	echo "</tr>";	
 	}
 } 
 									echo '</tbody>
@@ -324,8 +325,9 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 					<option value='admin' default>Admin</option>
 					<option value='user'>User</option>
 				  </select></td>";
-		echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
-		echo "</form></tr>";	
+		echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></form>
+		<a href='controller/deleteUser.php?partition=".$entity->getPartitionKey()."&rowkey=".$entity->getRowKey()."'><button type='submit' class='btn btn-info btn-fill'>Delete</button></a></td>";
+		echo "</tr>";	
 	}
 } 
 									echo '</tbody>
