@@ -264,8 +264,12 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 	foreach($entities as $entity){
 	if($entity->getProperty("role")->getValue()=="user"){
 	echo "<tr>";
-	echo "<td>".$entity->getPartitionKey()."</td>";
-	echo "<td>".$entity->getRowKey()."</td>";
+	echo "<td><div class='form-group'>
+	<input type='text' name='username' id='username' class='form-control' placeholder='Username' value=".$entity->getPartitionKey()." required>
+     </div></td>";
+	echo "<td><div class='form-group'>
+	<input type='text' name='password' id='password' class='form-control' placeholder='password' value=".$entity->getRowKey()." required>
+     </div></td>";
 	echo "</tr>";	
 	}
 } 
