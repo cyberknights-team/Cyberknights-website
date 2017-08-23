@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link href="assets/css/demo.css" rel="stylesheet" />
 	</head>
 	<body>
 
@@ -12,6 +13,25 @@
 	session_start();
 	if(isset($_SESSION['username']))
 		header("Location: welcome.php");
+	
+	if(isset($_GET['result'])){
+	echo '<script type="text/javascript">
+			$(document).ready(function(){
+
+        	demo.initChartist();
+
+        	$.notify({
+            	icon: "pe-7s-gift",
+            	message: '.$_GET['result'].'
+
+            },{
+                type: "info",
+                timer: 2000
+            });
+
+    	});
+		</script>';
+	}
 ?>
 
 
