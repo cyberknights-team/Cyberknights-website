@@ -211,7 +211,7 @@ foreach($entities as $entity){
 		
 echo '</tbody></table></div></div></div></div></div></div>';
 }
-/*else if($_GET['div']== "software"){
+else if($_GET['div']== "software"){
 		include 'controller/getAllSoftware.php';
 			echo '
 			<div class="content">
@@ -220,7 +220,7 @@ echo '</tbody></table></div></div></div></div></div></div>';
 						<div class="col-md-12">
 							<div class="card">
 								<div class="header">						
-									<h4 class="title">Materials</h4>
+									<h4 class="title">Software</h4>
 									<p class="category"></p>
 								</div>
                             <div class="content table-responsive table-full-width">
@@ -241,14 +241,14 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getRowKey())."</td>";
 	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
 	echo "<center><td>
-	<a target='_blank' href='http://digischool.blob.core.windows.net/".."'>
+	<a target='_blank' href='http://digischool.blob.core.windows.net/'>
 	<button type='submit' class='btn btn-info btn-fill'>Download</button>
 	</a>";
 	echo "</tr>";	
 }                         
 		
 echo '</tbody></table></div></div></div></div></div></div>';
-}*/
+}
 else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
 	include 'controller/getAllUsers.php';
 	echo '
