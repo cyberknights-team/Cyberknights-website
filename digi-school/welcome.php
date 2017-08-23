@@ -258,19 +258,21 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Username</th>
-                                    	<th>Pin</th>											
+                                    	<th>Pin</th>	
+										<th>Options</th>										
                                     </thead>
 									<tbody>';
 	foreach($entities as $entity){
 	if($entity->getProperty("role")->getValue()=="user"){
-	echo "<tr>";
+	echo "<tr><form action= 'controller/updateUser.php' method='POST'>";
 	echo "<td><div class='form-group'>
 	<input type='text' name='username' id='username' class='form-control' placeholder='Username' value=".$entity->getPartitionKey()." required>
      </div></td>";
 	echo "<td><div class='form-group'>
 	<input type='text' name='password' id='password' class='form-control' placeholder='password' value=".$entity->getRowKey()." required>
      </div></td>";
-	echo "</tr>";	
+	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
+	echo "</form></tr>";	
 	}
 } 
 									echo '</tbody>
