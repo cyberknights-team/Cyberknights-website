@@ -301,6 +301,44 @@ else if ($_GET['div']== "addUser" && isset($_SESSION['admin'])){
             </div>
         </div>';
 }
+else if($_GET['div']== "software"){
+		include 'controller/getAllSoftware.php';
+			echo '
+			<div class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="header">						
+									<h4 class="title">Software</h4>
+									<p class="category"></p>
+								</div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+										<th>Category</th>
+                                        <th>Software kit</th>
+										<th>Contains</th>
+										<th>Options</th>
+                                    </thead>
+                                    <tbody>';
+	
+
+
+foreach($entities as $entity){
+	echo "<tr>";
+	echo "<td>".$entity->getPartitionKey()."</td>";
+	echo "<td>".$entity->getRowKey()."</td>";
+	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
+	echo "<center><td>
+	<a target='_blank' href='#'>
+	<button type='submit' class='btn btn-info btn-fill'>Download</button>
+	</a>";
+	echo "</tr>";	
+}                         
+		
+echo '</tbody></table></div></div></div></div></div></div>';
+}
 else if ($_GET['div']== "showFeedbacks"){
 	include 'controller/getAllFeedbacks.php';
 			echo '
