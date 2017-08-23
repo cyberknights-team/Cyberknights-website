@@ -62,7 +62,7 @@
 			else
 				echo '<li class="active">';
                    echo' <a href="welcome.php?div=software">
-                        <i class="pe-7s-graph"></i>
+                        <i class="pe-7s-paint-bucket"></i>
                         <p>Materials</p>
                     </a>
                 </li>';	
