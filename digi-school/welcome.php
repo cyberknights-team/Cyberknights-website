@@ -205,7 +205,7 @@ foreach($entities as $entity){
 	echo "<center><td>
 	<a target='_blank' href='controller/viewPDF.php?category=".$category."&fileName=".$fileName."'>
 	<button type='submit' class='btn btn-info btn-fill'>View</button>
-	</a>";
+	</a></center></td>";
 	echo "</tr>";	
 }                         
 		
@@ -240,9 +240,9 @@ foreach($entities as $entity){
 	echo "<td>".$entity->getPartitionKey()."</td>";
 	echo "<td>".$entity->getRowKey())."</td>";
 	echo "<td>".$entity->getProperty("Contains")->getValue()."</td>";
-	echo "<a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey()."'>
+	echo "<td><a target='_blank' href='http://digischool.blob.core.windows.net/".$entity->getPartitionKey()."/".$entity->getRowKey()."'>
 	<button type='submit' class='btn btn-info btn-fill'>Download</button>
-	</a>";
+	</a></td>";
 	echo "</tr>";	
 }                         
 		
