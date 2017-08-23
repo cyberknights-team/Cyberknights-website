@@ -519,7 +519,7 @@ else
 		else{
 			$msg = $_GET['result'];
 		}
-		echo '
+	echo '
 		<script type="text/javascript">
 			$(document).ready(function(){
 
@@ -527,7 +527,7 @@ else
 
         	$.notify({
             	icon: "pe-7s-gift",
-            	message: '.$msg.'
+            	message: "'.$msg.'"
 
             },{
                 type: "info",
@@ -537,6 +537,6 @@ else
     	});
 		</script>';
 	}
-	
+		
 ?>
 </html>
