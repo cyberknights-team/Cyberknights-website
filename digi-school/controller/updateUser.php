@@ -20,6 +20,7 @@ $entity->setPropertyValue("ParitionKey", $_POST['username']);
 
 $entity->setPropertyValue("RowKey", $_POST['password']);
 
+$entity->setPropertyValue("role", $_POST['role']);
 
 try    {
     $tableRestProxy->updateEntity("users", $entity);

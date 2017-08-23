@@ -258,7 +258,8 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Username</th>
-                                    	<th>Pin</th>	
+                                    	<th>Pin</th>
+										<th>Role</th>											
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
@@ -273,6 +274,10 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 	echo "<td><div class='form-group'>
 	<input type='text' name='password' id='password' maxlength='4' class='form-control' placeholder='password' value=".$entity->getRowKey()." required>
      </div></td>";
+	echo '<td><select name="role" id ="role" class="form-control">
+				<option value="user" default>User</option>
+				<option value="admin">Admin</option>
+		</select></td>';
 	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
 	echo "</form></tr>";	
 	}
@@ -294,6 +299,7 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                                     <thead>
                                         <th>Username</th>
                                     	<th>Pin</th>
+										<th>Role</th>
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
@@ -307,6 +313,10 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 	echo "<td><div class='form-group'>
 	<input type='text' name='password' id='password' class='form-control' placeholder='password' value=".$entity->getRowKey()." maxLength='4' required>
      </div></td>";
+	echo '<td><select name="role" id ="role" class="form-control">
+				<option value="user">User</option>
+				<option value="admin" default>Admin</option>
+		</select></td>';
 	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></td>";
 	echo "</form></tr>";	
 	}
