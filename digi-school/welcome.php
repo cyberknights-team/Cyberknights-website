@@ -26,7 +26,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-4.jpg">
+    <div class="sidebar" data-color="black" data-image="assets/img/sidebar-4.jpg">
 
     	<div class="sidebar-wrapper">
             <div class="logo">
