@@ -497,8 +497,8 @@ else if($_GET['div']== "upload"){
 								
                             </div>
 						
-                        </div>
-						<div class="card">
+                        </div>';
+						/*echo '<div class="card">
                             <div class="header">
                                 <h4 class="title">Upload Software</h4>
                             </div>
@@ -522,8 +522,8 @@ else if($_GET['div']== "upload"){
 								
                             </div>
 						
-                        </div>
-					</div>
+                        </div>';*/
+					echo '</div>
 				</div>
 			</div>
 		';
