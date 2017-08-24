@@ -38,7 +38,7 @@ $entity = new Entity();
 $entity->setPartitionKey($event);
 $entity->setRowKey($fileName);
 $entity->addProperty("Category", null,$category);
-$size = (String)($_FILES["file"]["size"]/1024);
+$size = (String)(intval($_FILES["file"]["size"]/1024));
 $entity->addProperty("Size", null,$size."kb");
 date_default_timezone_set("Asia/Kolkata");
 $date = date("Y-m-d h:i:sa");
