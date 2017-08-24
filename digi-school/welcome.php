@@ -276,9 +276,9 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Username</th>
-                                    	<th>Pin</th>
-										<th>Role</th>											
+                                        <th>Member Username</th>
+										<th>Pin (Max-Length:4)</th>
+										<th>Role (Member Access)</th>												
 										<th>Options</th>										
                                     </thead>
 									<tbody>';
@@ -317,10 +317,10 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Username</th>
-                                    	<th>Pin</th>
-										<th>Role</th>
-										<th>Options</th>										
+                                        <th>Member Username</th>
+										<th>Pin (Max-Length:4)</th>
+										<th>Role (Member Access)</th>												
+										<th>Options</th>											
                                     </thead>
 									<tbody>';
 	foreach($entities as $entity){
@@ -486,7 +486,7 @@ else if($_GET['div']== "upload"){
                                             <div class="form-group">
 												<input type="text"  name="category" id="category" class="form-control" placeholder="Category" required/>
                                                 <br>
-												<textarea name="contains" id="contains" rows="4" cols="50" class="form-control" placeholder="Contains" required></textarea>
+												<input type="text"  name="event" id="event" class="form-control" placeholder="Event Name" required/>
                                             </div>
                                         </div>                                      
                                     </div>
