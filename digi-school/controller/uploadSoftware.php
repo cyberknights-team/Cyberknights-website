@@ -38,7 +38,11 @@ $entity = new Entity();
 $entity->setPartitionKey($category);
 $entity->setRowKey($fileName);
 $entity->addProperty("Contains", null,$contains);
-$entity->addProperty("Size", null,($_FILES["file"]["size"]/1024)+"kb");
+$size = (String)(intval($_FILES["file"]["size"]/1024));
+$entity->addProperty("Size", null,$size."kb");
+date_default_timezone_set("Asia/Kolkata");
+$date = date("Y-m-d h:i:sa");
+$entity->addProperty("Date", null,$date);
 try{
     $tableRestProxy->insertEntity("software", $entity);
 	header("Location:../welcome.php?div=upload&result=softwarey"); 
