@@ -173,7 +173,7 @@
 <?php
 if(isset($_GET['div'])){
 	if($_GET['div']== "material"){
-		include 'controller/getAllEvents.php';
+		include 'controller/getAllFiles.php';
 			echo '
 			<div class="content">
 				<div class="container-fluid">
@@ -187,7 +187,7 @@ if(isset($_GET['div'])){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-										<th>Event name</th>
+										<th>Event Code</th>
 										<th>Category</th>
                                         <th>FileName</th>
 										<th>Date</th>
@@ -202,11 +202,11 @@ foreach($entities as $entity){
 	echo "<tr>";
 	echo "<td>".$entity->getPartitionKey()."</td>";
 	echo "<td>".$entity->getProperty("Category")->getValue()."</td>";
-	echo "<td>".$entity->getProperty("FileName")->getValue()."</td>";
+	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("Size")->getValue()."</td>";
 	$category = strtolower($entity->getProperty("Category")->getValue());
-	$fileName = $entity->getProperty("FileName")->getValue();
+	$fileName = $entity->getRowKey();
 	echo "<center><td>
 	<a target='_blank' href='controller/viewPDF.php?category=".$category."&fileName=".$fileName."'>
 	<button type='submit' class='btn btn-info btn-fill'>View</button>

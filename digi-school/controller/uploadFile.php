@@ -2,7 +2,7 @@
 
 include 'config.php';
      $fileName = $_FILES["file"]["name"];
-	 $category = $_POST['category'];
+	 $category = strtolower($_POST['category']);
 	 $event = $_POST['event'];
 
 require_once 'vendor/autoload.php';
