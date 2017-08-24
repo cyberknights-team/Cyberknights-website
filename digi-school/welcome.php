@@ -480,13 +480,13 @@ else if($_GET['div']== "upload"){
 
                             <div class="content">
 							
-                                <form action="controller/uploadSoftware.php" method="POST"  enctype="multipart/form-data">
+                                <form action="controller/uploadFile.php" method="POST"  enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
 												<input type="text"  name="category" id="category" class="form-control" placeholder="Category" required/>
                                                 <br>
-												<input type="text"  name="event" id="event" class="form-control" placeholder="Event Name" required/>
+												<input type="text"  name="event" id="event" class="form-control" placeholder="Event Code" required/>
                                             </div>
                                         </div>                                      
                                     </div>
