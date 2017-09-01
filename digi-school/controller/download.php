@@ -14,7 +14,9 @@ $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionSt
 try    {
     // Get blob.
     $blob = $blobRestProxy->getBlob($container, $file);
-    fpassthru($blob->getContentStream());
+    $source = stream_get_contents($blob->getContentStream());
+	$localPath = '/var/www/path/to/my/downloaded/file';
+	$result = file_put_contents($localPath, $source);
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.
