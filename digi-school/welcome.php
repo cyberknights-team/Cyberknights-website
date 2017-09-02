@@ -619,13 +619,13 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='rowKey' value='".$entity->getRowKey()."' />
 	</div></td>";
 	echo "<td><div class='form-group'>
-	<Textarea type='text' name='date' id='date' class='form-control' placeholder='Date' value=".$entity->getProperty("Date")->getValue()." required></Textarea>
+	<Textarea type='text' name='date' id='date' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
      </div></td>";
 	echo "<td><div class='form-group'>
-	<Textarea type='text' name='EventName' id='EventName'  class='form-control' placeholder='Event Name' value=".$entity->getProperty("EventName")->getValue()." required></Textarea>
+	<Textarea type='text' name='EventName' id='EventName'  class='form-control' placeholder='Event Name' required>".$entity->getProperty("EventName")->getValue()."</Textarea>
      </div></td>";
 	 echo "<td><div class='form-group'>
-	<Textarea type='text' name='EventPlace' id='EventPlace'  class='form-control' placeholder='Event Place' value=".$entity->getProperty("EventPlace")->getValue()." required></Textarea>
+	<Textarea type='text' name='EventPlace' id='EventPlace'  class='form-control' placeholder='Event Place'  required>".$entity->getProperty("EventPlace")->getValue()."</Textarea>
      </div></td>";
 	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></form></td>";
 	echo "</tr>";	
@@ -636,7 +636,8 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
                             </div>
                         </div>
                     </div>
-				</div>';
+				</div>
+			</div>';
 }
 else if($_GET['div']== "logout"){
 session_start();
