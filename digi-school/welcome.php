@@ -606,7 +606,7 @@ else if($_GET['div']== "showEvents"){
                                         <th>Event Code</th>
 										<th>Date</th>';
 										if(isset($_SESSION['admin']))
-											echo'<th>Access Code</th>';										
+											echo'<th>Access Code</th>';	
 										echo '<th>Event Name</th>		
 										<th>Event Place</th>';
 										if(isset($_SESSION['admin']))
@@ -620,10 +620,10 @@ else if($_GET['div']== "showEvents"){
 	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
 	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='eventCode' id='eventCode' value='".$entity->getPartitionKey()."' />
 	</div></td>";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='date' id='date' value='".$entity->getRowKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Date' name='date' id='date' value='".$entity->getRowKey()."' />
 	</div></td>";
 	echo "<td><div class='form-group'>
-	<Textarea type='text' name='accessCode' id='accessCode' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
+	<Textarea type='text' name='accessCode' id='accessCode' class='form-control' placeholder='Access Code' required>".$entity->getProperty("AccessCode")->getValue()."</Textarea>
      </div></td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='EventName' id='EventName'  class='form-control' placeholder='Event Name' required>".$entity->getProperty("EventName")->getValue()."</Textarea>
