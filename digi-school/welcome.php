@@ -639,7 +639,7 @@ else
 				$msg = "File has been uploaded !!!";
 			}
 			else if($_GET['div']=="presence"){
-				$msg = "You have been marked for this event"
+				$msg = "You have been marked for this event";
 			}
 		}
 		else{
