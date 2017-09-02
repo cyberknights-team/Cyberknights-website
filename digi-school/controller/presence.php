@@ -1,12 +1,24 @@
 <?php
 
 include 'config.php';
+include 'getAllEvents.php';
 session_start();
 $username = $_SESSION['username'];
 $event = $_POST['event'];
 $access = $_POST['access'];
 date_default_timezone_set("Asia/Kolkata");
 $date = date("Y-m-d h:i:sa");
+
+foreach($entities as $entity){
+	if($entity->getPartitionKey()==$event){
+		if(entity->getRowKey()!=$access){
+			$msg = "Access Denied !!!";
+			header("Location:../welcome.php?div=presence&result=".$msg."");
+		}	
+	}
+}
+
+
 
 require_once 'vendor/autoload.php';
 
