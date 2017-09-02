@@ -616,9 +616,11 @@ else if($_GET['div']== "showEvents"){
 	foreach($entities as $entity){
 	if(isset($_SESSION['admin'])){
 	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='partition' value='".$entity->getPartitionKey()."' />
+	echo "<input type='hidden' name='partition' value='".$entity->getPartitionKey()."' />";
+	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='eventCode' value='".$entity->getPartitionKey()."' />
 	</div></td>";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='rowKey' value='".$entity->getRowKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='accessCode' value='".$entity->getRowKey()."' />
 	</div></td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='date' id='date' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
@@ -715,6 +717,9 @@ else
 			}
 			else if($_GET['div']=="presence"){
 				$msg = "You have been marked for this event";
+			}
+			else if($_GET['div']=="showEvents"){
+				$msg = "Events data has been updated";
 			}
 		}
 		else{
