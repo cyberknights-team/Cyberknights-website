@@ -1,7 +1,7 @@
 <?php
 $category = $_GET['category'];
 $fileName = $_GET['fileName'];
-$link = "http://digischool.blob.core.windows.net/".$category."/".$fileName;
+$link = "http://digischool04.blob.core.windows.net/".$category."/".$fileName;
 header("Content-Length: " . filesize ($link) ); 
 header("Content-type: application/pdf"); 
 header("Content-disposition: inline;     

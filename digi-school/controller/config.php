@@ -1,3 +1,3 @@
 <?php
-$connectionString=  "DefaultEndpointsProtocol=https;AccountName=digischool;AccountKey=R8YiFHNFHlOx0jVZGThFazr81FHXqCpmRBkU2SLs1RMVTf6Kec6S3oSdntxmunMIOpp4v3F7PB/whpsf74QwwQ==";
+$connectionString=  "DefaultEndpointsProtocol=https;AccountName=digischool04;AccountKey=BBqpVcgEafyf1K+tEMp9ASVzDfPFQ31y0RtLUpEGxQUSyfGLEwZSlD9Z40yCBMSzSJWbO9RSaLJOwspXBux/DA==";
 ?>
