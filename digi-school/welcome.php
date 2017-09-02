@@ -643,7 +643,11 @@ else
 			}
 		}
 		else{
-			$msg = $_GET['result'];
+			if($_GET['div']=="presence"){
+				$msg = "You have been already marked your presence for this event";
+			}
+			else
+				$msg = $_GET['result'];
 		}
 	echo '
 		<script type="text/javascript">
