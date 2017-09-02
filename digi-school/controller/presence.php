@@ -16,12 +16,6 @@ foreach($entities as $entity){
 			header("Location:../welcome.php?div=presence&result=".$msg."");
 		}	
 		else{
-			require_once 'vendor/autoload.php';
-
-use WindowsAzure\Common\ServicesBuilder;
-use MicrosoftAzure\Storage\Common\ServiceException;
-use MicrosoftAzure\Storage\Table\Models\Entity;
-use MicrosoftAzure\Storage\Table\Models\EdmType;
 
 // Create table REST proxy.
 $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connectionString);
