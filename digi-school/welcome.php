@@ -64,7 +64,7 @@
 				echo '<li>';
 			}
 			else
-				echo '<li class="active">';
+				echo '<li>';
                    echo' <a href="welcome.php?div=software">
                         <i class="pe-7s-paint-bucket"></i>
                         <p>Software</p>
@@ -78,7 +78,7 @@
 				echo '<li>';
 			}
 			else
-				echo '<li class="active">';
+				echo '<li>';
                    echo' <a href="welcome.php?div=presence">
                         <i class="pe-7s-switch"></i>
                         <p>Make Presence</p>
@@ -92,9 +92,9 @@
 				echo '<li>';
 			}
 			else
-				echo '<li class="active">';
+				echo '<li>';
                    echo' <a href="welcome.php?div=showEvents">
-                        <i class="pe-7s-hourglass"></i>
+                        <i class="pe-7s-plugin"></i>
                         <p>Events</p>
                     </a>
                 </li>';	
