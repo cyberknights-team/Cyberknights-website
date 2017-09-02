@@ -16,9 +16,15 @@ $result = $tableRestProxy->getEntity("events", $_POST['partition'], $_POST['rowK
 
 $entity = $result->getEntity();
 
-$entity->setPropertyValue("ParitionKey", $_POST['eventCode']);
+$entity->setPropertyValue("ParitionKey", $_POST['partition']);
 
-$entity->setPropertyValue("RowKey", $_POST['date']);
+$entity->setPropertyValue("RowKey", $_POST['rowKey']);
+
+$entity->setPropertyValue("AccessCode", $_POST['date']);
+
+$entity->setPropertyValue("AccessCode", $_POST['host']);
+
+$entity->setPropertyValue("AccessCode", $_POST['duration']);
 
 $entity->setPropertyValue("AccessCode", $_POST['accessCode']);
 

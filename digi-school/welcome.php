@@ -604,11 +604,17 @@ else if($_GET['div']== "showEvents"){
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Event Code</th>
-										<th>Date</th>';
+										<th>Category</th>';
+										
 										if(isset($_SESSION['admin']))
 											echo'<th>Access Code</th>';	
-										echo '<th>Event Name</th>		
-										<th>Event Place</th>';
+										
+										echo '
+										<th>Date</th>
+										<th>Event Name</th>		
+										<th>Event Place</th>
+										<th>Host</th>
+										<th>Duration</th>';
 										if(isset($_SESSION['admin']))
 											echo '<th>Options</th>';										
                                     echo '</thead>
@@ -617,19 +623,26 @@ else if($_GET['div']== "showEvents"){
 	if(isset($_SESSION['admin'])){
 	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
 	echo "<input type='hidden' name='partition' value='".$entity->getPartitionKey()."' />";
-	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='eventCode' id='eventCode' value='".$entity->getPartitionKey()."' />
-	</div></td>";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Date' name='date' id='date' value='".$entity->getRowKey()."' />
-	</div></td>";
+	echo "<input type='hidden' name='rowKey' value='".$entity->getPartitionKey()."' />";
+	echo "<td>".$entity->getPartitionKey()."</td>";
+	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='accessCode' id='accessCode' class='form-control' placeholder='Access Code' required>".$entity->getProperty("AccessCode")->getValue()."</Textarea>
+    </div></td>";
+	echo "<td><div class='form-group'>
+	<Textarea type='text' name='date' id='date' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
      </div></td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='EventName' id='EventName'  class='form-control' placeholder='Event Name' required>".$entity->getProperty("EventName")->getValue()."</Textarea>
      </div></td>";
 	 echo "<td><div class='form-group'>
 	<Textarea type='text' name='EventPlace' id='EventPlace'  class='form-control' placeholder='Event Place'  required>".$entity->getProperty("EventPlace")->getValue()."</Textarea>
+     </div></td>";
+	 echo "<td><div class='form-group'>
+	<Textarea type='text' name='host' id='host'  class='form-control' placeholder='Host'  required>".$entity->getProperty("Host")->getValue()."</Textarea>
+     </div></td>";
+	echo "<td><div class='form-group'>
+	<Textarea type='text' name='duration' id='duration'  class='form-control' placeholder='Duration'  required>".$entity->getProperty("Duration")->getValue()."</Textarea>
      </div></td>";
 	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></form></td>";
 	echo "</tr>";	
@@ -638,8 +651,11 @@ else if($_GET['div']== "showEvents"){
 	echo "<tr>";
 	echo "<td>".$entity->getPartitionKey()."</td>";
 	echo "<td>".$entity->getRowKey()."</td>";
+	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventName")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventPlace")->getValue()."</td>";
+	echo "<td>".$entity->getProperty("Host")->getValue()."</td>";
+	echo "<td>".$entity->getProperty("Duration")->getValue()."</td>";
 	echo "</tr>";	
 	}
 	} 
