@@ -18,9 +18,9 @@ $entity = $result->getEntity();
 
 $entity->setPropertyValue("ParitionKey", $_POST['eventCode']);
 
-$entity->setPropertyValue("RowKey", $_POST['accessCode']);
+$entity->setPropertyValue("RowKey", $_POST['date']);
 
-$entity->setPropertyValue("Date", $_POST['date']);
+$entity->setPropertyValue("AccessCode", $_POST['accessCode']);
 
 $entity->setPropertyValue("EventName", $_POST['EventName']);
 
