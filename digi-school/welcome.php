@@ -70,6 +70,7 @@
                         <p>Software</p>
                     </a>
                 </li>';	
+			
 			if(isset($_GET['div'])){
 			if($_GET['div']=="presence")
 				echo '<li class="active">';
@@ -83,6 +84,22 @@
                         <p>Make Presence</p>
                     </a>
                 </li>';	
+			
+			if(isset($_SESSION['admin'])){
+				if(isset($_GET['div'])){
+			if($_GET['div']=="showEvents")
+				echo '<li class="active">';
+			else
+				echo '<li>';
+			}
+			else
+				echo '<li class="active">';
+                   echo' <a href="welcome.php?div=showEvents">
+                        <i class="pe-7s-switch"></i>
+                        <p>Show Events</p>
+                    </a>
+                </li>';	
+			}
 			
 			if(isset($_SESSION['admin'])){
 				if(isset($_GET['div'])){
@@ -595,9 +612,9 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 									<tbody>';
 	foreach($entities as $entity){
 	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
-	echo "<td><div class='form-group'><input type='text' name='partition' value='".$entity->getPartitionKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='partition' value='".$entity->getPartitionKey()."' />
 	</div></td>";
-	echo "<td><div class='form-group'><input type='text' name='rowKey' value='".$entity->getRowKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='rowKey' value='".$entity->getRowKey()."' />
 	</div></td>";
 	echo "<td><div class='form-group'>
 	<input type='text' name='date' id='date' class='form-control' placeholder='Date' value=".$entity->getProperty("Date")->getValue()." required>
