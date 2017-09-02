@@ -25,7 +25,7 @@ $entity->addProperty("date", null,$event);
 
 try{
     $tableRestProxy->insertEntity("presence", $entity);
-	header("Location:../welcome.php?div=feedback&result=y");
+	header("Location:../welcome.php?div=presence&result=y");
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.
@@ -33,7 +33,7 @@ catch(ServiceException $e){
     // http://msdn.microsoft.com/library/azure/dd179438.aspx
     $code = $e->getCode();
     $error_message = $e->getMessage();
-	header("Location:../welcome.php?div=feedback&result='User already marked their presence'");
+	header("Location:../welcome.php?div=presence&result='User already marked their presence'");
 }
 
 ?>
