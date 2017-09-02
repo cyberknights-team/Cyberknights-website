@@ -85,8 +85,7 @@
                     </a>
                 </li>';	
 			
-			if(isset($_SESSION['admin'])){
-				if(isset($_GET['div'])){
+			if(isset($_GET['div'])){
 			if($_GET['div']=="showEvents")
 				echo '<li class="active">';
 			else
@@ -99,7 +98,6 @@
                         <p>Show Events</p>
                     </a>
                 </li>';	
-			}
 			
 			if(isset($_SESSION['admin'])){
 				if(isset($_GET['div'])){
