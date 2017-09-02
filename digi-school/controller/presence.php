@@ -33,7 +33,8 @@ catch(ServiceException $e){
     // http://msdn.microsoft.com/library/azure/dd179438.aspx
     $code = $e->getCode();
     $error_message = $e->getMessage();
-	header("Location:../welcome.php?div=presence&result='User already marked their presence'");
+	$msg = "You have been already marked your presence for this event";
+	header("Location:../welcome.php?div=presence&result=".$msg."");
 }
 
 ?>
