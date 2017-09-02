@@ -23,7 +23,7 @@ $tableRestProxy = ServicesBuilder::getInstance()->createTableService($connection
 $entity = new Entity();
 $entity->setPartitionKey($event);
 $entity->setRowKey($username);
-$entity->addProperty("date", null,$event);
+$entity->addProperty("date", null,$date);
 
 try{
     $tableRestProxy->insertEntity("presence", $entity);
