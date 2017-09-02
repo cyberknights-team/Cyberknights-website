@@ -100,6 +100,20 @@
                     </a>
                 </li>';
 				if(isset($_GET['div'])){
+				  if($_GET['div']=="showEvents")
+				    echo '<li class="active">';
+			     else
+				    echo '<li>';
+				}
+				else
+				echo '<li>';
+				echo '
+                    <a href="welcome.php?div=showEvents">
+                        <i class="pe-7s-user"></i>
+                        <p>Show Events</p>
+                    </a>
+                </li>';
+				if(isset($_GET['div'])){
 				  if($_GET['div']=="Show feedbacks")
 				    echo '<li class="active">';
 			     else
@@ -367,6 +381,48 @@ else if ($_GET['div']== "member" && isset($_SESSION['admin'])){
 				
             </div>
         </div>';
+}
+else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
+	include 'controller/getAllEvents.php';
+	echo '
+						<div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Events</h4>
+                                <p class="category"></p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Event Code</th>
+										<th>Access Code</th>
+										<th>Date</th>												
+										<th>Event Name</th>		
+										<th>Event Place</th>											
+                                    </thead>
+									<tbody>';
+	foreach($entities as $entity){
+	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
+	echo "<input type='text' name='partition' value='".$entity->getPartitionKey()."' />";
+	echo "<input type='text' name='rowKey' value='".$entity->getRowKey()."' />";
+	echo "<td><div class='form-group'>
+	<input type='text' name='date' id='date' class='form-control' placeholder='Date' value=".$entity->getProperty("Date")->getValue()." required>
+     </div></td>";
+	echo "<td><div class='form-group'>
+	<input type='text' name='EventName' id='EventName'  class='form-control' placeholder='Event Name' value=".$entity->getProperty("EventName")->getValue()." required>
+     </div></td>";
+	 echo "<td><div class='form-group'>
+	<input type='text' name='EventPlace' id='EventPlace'  class='form-control' placeholder='Event Place' value=".$entity->getProperty("EventPlace")->getValue()." required>
+     </div></td>";
+	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></form></td>";
+	echo "</tr>";	
+	} 
+									echo '</tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>';
 }
 else if($_GET['div']== "software"){
 		include 'controller/getAllSoftware.php';
