@@ -603,9 +603,10 @@ else if($_GET['div']== "showEvents"){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Event Code</th>
-										<th>Access Code</th>
-										<th>Date</th>												
+                                        <th>Event Code</th>';
+										if(isset($_SESSION['admin']))
+											echo'<th>Access Code</th>';
+										echo '<th>Date</th>												
 										<th>Event Name</th>		
 										<th>Event Place</th>';
 										if(isset($_SESSION['admin']))
@@ -634,7 +635,6 @@ else if($_GET['div']== "showEvents"){
 	else{
 	echo "<tr>";
 	echo "<td>".$entity->getPartitionKey()."</td>";
-	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventName")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventPlace")->getValue()."</td>";
