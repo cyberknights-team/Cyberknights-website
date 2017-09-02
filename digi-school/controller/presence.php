@@ -15,12 +15,8 @@ foreach($entities as $entity){
 			$msg = "Access Denied !!!";
 			header("Location:../welcome.php?div=presence&result=".$msg."");
 		}	
-	}
-}
-
-
-
-require_once 'vendor/autoload.php';
+		else{
+			require_once 'vendor/autoload.php';
 
 use WindowsAzure\Common\ServicesBuilder;
 use MicrosoftAzure\Storage\Common\ServiceException;
@@ -48,5 +44,12 @@ catch(ServiceException $e){
 	$msg = "You have been already marked your presence for this event";
 	header("Location:../welcome.php?div=presence&result=".$msg."");
 }
+		}
+	}
+}
+
+
+
+
 
 ?>
