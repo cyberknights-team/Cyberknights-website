@@ -609,7 +609,8 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 										<th>Access Code</th>
 										<th>Date</th>												
 										<th>Event Name</th>		
-										<th>Event Place</th>											
+										<th>Event Place</th>
+										<th>Options</th>											
                                     </thead>
 									<tbody>';
 	foreach($entities as $entity){
