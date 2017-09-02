@@ -597,7 +597,6 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 	<div class="content">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-12">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Events</h4>
@@ -636,7 +635,8 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 
                             </div>
                         </div>
-                    </div>';
+                    </div>
+				</div>';
 }
 else if($_GET['div']== "logout"){
 session_start();
