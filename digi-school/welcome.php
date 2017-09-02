@@ -591,6 +591,7 @@ else if($_GET['div']== "upload"){
 }
 else if($_GET['div']== "showEvents"){
 	include 'controller/getAllEvents.php';
+	include 'controller/getAllPresence.php';
 	echo '
 	<div class="content">
 				<div class="container-fluid">
@@ -604,7 +605,8 @@ else if($_GET['div']== "showEvents"){
                                 <table class="table table-hover table-striped">
                                     <thead>
                                         <th>Event Code</th>
-										<th>Category</th>';
+										<th>Category</th>
+										<th>Presence</th>';
 										
 										if(isset($_SESSION['admin']))
 											echo'<th>Access Code</th>';	
@@ -626,6 +628,14 @@ else if($_GET['div']== "showEvents"){
 	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
 	echo "<td>".$entity->getPartitionKey()."</td>";
 	echo "<td>".$entity->getRowKey()."</td>";
+	$response = "Not Attended";
+	foreach($attendences as $attendence){
+		if($attendence->getPartitionKey()==$entity->getPartitionKey()){
+			if($_SESSION['username'] == $attendence->getRowKey())
+				$response = "Attended";
+		}
+	}
+	echo "<td>".$response."</td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='accessCode' id='accessCode' class='form-control' placeholder='Access Code' required>".$entity->getProperty("AccessCode")->getValue()."</Textarea>
     </div></td>";
@@ -651,6 +661,14 @@ else if($_GET['div']== "showEvents"){
 	echo "<tr>";
 	echo "<td>".$entity->getPartitionKey()."</td>";
 	echo "<td>".$entity->getRowKey()."</td>";
+	$response = "Not Attended";
+	foreach($attendences as $attendence){
+		if($attendence->getPartitionKey()==$entity->getPartitionKey()){
+			if($_SESSION['username'] == $attendence->getRowKey())
+				$response = "Attended";
+		}
+	}
+	echo "<td>".$response."</td>";
 	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventName")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventPlace")->getValue()."</td>";
