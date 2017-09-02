@@ -594,6 +594,9 @@ else if($_GET['div']== "upload"){
 else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 	include 'controller/getAllEvents.php';
 	echo '
+	<div class="content">
+				<div class="container-fluid">
+					<div class="row">
 						<div class="col-md-12">
                         <div class="card">
                             <div class="header">
