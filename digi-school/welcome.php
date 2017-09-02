@@ -94,8 +94,8 @@
 			else
 				echo '<li class="active">';
                    echo' <a href="welcome.php?div=showEvents">
-                        <i class="pe-7s-switch"></i>
-                        <p>Show Events</p>
+                        <i class="pe-7s-hourglass"></i>
+                        <p>Events</p>
                     </a>
                 </li>';	
 			
