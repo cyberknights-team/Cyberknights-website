@@ -70,7 +70,19 @@
                         <p>Software</p>
                     </a>
                 </li>';	
-			
+			if(isset($_GET['div'])){
+			if($_GET['div']=="presence")
+				echo '<li class="active">';
+			else
+				echo '<li>';
+			}
+			else
+				echo '<li class="active">';
+                   echo' <a href="welcome.php?div=presence">
+                        <i class="pe-7s-switch"></i>
+                        <p>Make Presence</p>
+                    </a>
+                </li>';	
 			
 			if(isset($_SESSION['admin'])){
 				if(isset($_GET['div'])){
@@ -468,6 +480,40 @@ else if($_GET['div']== "feedback"){
 			</div>
 		';
 }
+else if($_GET['div']== "presence"){
+	echo '
+        <div class="content">
+            <div class="container-fluid"> 
+                <div class="row">
+				  <div class="card">
+                            <div class="header">
+                                <h4 class="title">Mark my presence</h4>
+                            </div>
+
+                            <div class="content">
+							
+                                <form action="controller/presence.php" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+												<input type="text"  name="event" id="event" class="form-control" placeholder="Event Code" required/>
+                                                <br>
+												<input type="text"  name="access" id="access" class="form-control" placeholder="Access Code" required/>
+                                            </div>
+                                        </div>                                      
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Mark Me!</button>
+                                    <div class="clearfix"></div>
+                                </form>
+								
+                            </div>
+						
+                        </div>
+					</div>
+				</div>
+			</div>
+		';
+}
 else if($_GET['div']== "upload"){
 	echo '
         <div class="content">
@@ -589,9 +635,11 @@ else
 				}
 		
 			}
-
-			else if($_GET['div']=="showFeedbacks"){
-				$msg = "Feedback has been removed !!!";
+			else if($_GET['div']=="upload"){
+				$msg = "File has been uploaded !!!";
+			}
+			else if($_GET['div']=="presence"){
+				$msg = "You have been marked for this event"
 			}
 		}
 		else{
