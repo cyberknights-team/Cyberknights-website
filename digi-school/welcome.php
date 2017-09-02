@@ -623,7 +623,7 @@ else if($_GET['div']== "showEvents"){
 	if(isset($_SESSION['admin'])){
 	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
 	echo "<input type='hidden' name='partition' value='".$entity->getPartitionKey()."' />";
-	echo "<input type='hidden' name='rowKey' value='".$entity->getPartitionKey()."' />";
+	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
 	echo "<td>".$entity->getPartitionKey()."</td>";
 	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td><div class='form-group'>
