@@ -589,7 +589,7 @@ else if($_GET['div']== "upload"){
 			</div>
 		';
 }
-else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
+else if($_GET['div']== "showEvents"){
 	include 'controller/getAllEvents.php';
 	echo '
 	<div class="content">
@@ -607,11 +607,13 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
 										<th>Access Code</th>
 										<th>Date</th>												
 										<th>Event Name</th>		
-										<th>Event Place</th>
-										<th>Options</th>											
-                                    </thead>
+										<th>Event Place</th>';
+										if(isset($_SESSION['admin']))
+											echo '<th>Options</th>';										
+                                    echo '</thead>
 									<tbody>';
 	foreach($entities as $entity){
+	if(isset($_SESSION['admin'])){
 	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
 	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='partition' value='".$entity->getPartitionKey()."' />
 	</div></td>";
@@ -628,6 +630,16 @@ else if($_GET['div']== "showEvents" && isset($_SESSION['admin'])){
      </div></td>";
 	echo "<td><button type='submit' class='btn btn-info btn-fill'>Update</button></form></td>";
 	echo "</tr>";	
+	}
+	else{
+	echo "<tr>";
+	echo "<td>".$entity->getPartitionKey()."</td>";
+	echo "<td>".$entity->getRowKey()."</td>";
+	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
+	echo "<td>".$entity->getProperty("EventName")->getValue()."</td>";
+	echo "<td>".$entity->getProperty("EventPlace")->getValue()."</td>";
+	echo "</tr>";	
+	}
 	} 
 									echo '</tbody>
                                 </table>
