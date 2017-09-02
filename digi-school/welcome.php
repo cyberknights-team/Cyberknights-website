@@ -619,7 +619,7 @@ else
 	<?php
 	$msg ="";
 	if(isset($_GET['result'])){
-		if(isset($_GET['result'])=='y'){
+		if($_GET['result']=='y'){
 			if($_GET['div']=="feedback"){
 				$msg = "Thanks for your feedback !!!";
 			}
@@ -643,10 +643,6 @@ else
 			}
 		}
 		else{
-			if($_GET['div']=="presence"){
-				$msg = "You have been already marked your presence for this event";
-			}
-			else
 				$msg = $_GET['result'];
 		}
 	echo '
