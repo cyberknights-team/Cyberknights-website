@@ -11,7 +11,8 @@ $date = date("Y-m-d h:i:sa");
 
 foreach($entities as $entity){
 	if($entity->getPartitionKey()==$event){
-		if(entity->getRowKey()!=$access){
+		if($entity->getRowKey()!=$access){
+		if($entity->getRowKey()!=$access){
 			$msg = "Access Denied !!!";
 			header("Location:../welcome.php?div=presence&result=".$msg."");
 		}	
