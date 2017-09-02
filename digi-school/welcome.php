@@ -99,19 +99,7 @@
                         <p>Members</p>
                     </a>
                 </li>';
-				if(isset($_GET['div'])){
-			if($_GET['div']=="showEvents")
-				echo '<li class="active">';
-			else
-				echo '<li>';
-			}
-			else
-				echo '<li class="active">';
-                   echo' <a href="welcome.php?div=showEvents">
-                        <i class="pe-7s-paint-bucket"></i>
-                        <p>Show Events</p>
-                    </a>
-                </li>';	
+				
 				if(isset($_GET['div'])){
 				  if($_GET['div']=="Show feedbacks")
 				    echo '<li class="active">';
