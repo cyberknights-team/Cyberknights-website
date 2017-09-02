@@ -603,11 +603,11 @@ else if($_GET['div']== "showEvents"){
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead>
-                                        <th>Event Code</th>';
+                                        <th>Event Code</th>
+										<th>Date</th>';
 										if(isset($_SESSION['admin']))
-											echo'<th>Access Code</th>';
-										echo '<th>Date</th>												
-										<th>Event Name</th>		
+											echo'<th>Access Code</th>';										
+										echo '<th>Event Name</th>		
 										<th>Event Place</th>';
 										if(isset($_SESSION['admin']))
 											echo '<th>Options</th>';										
@@ -620,10 +620,10 @@ else if($_GET['div']== "showEvents"){
 	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
 	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='eventCode' id='eventCode' value='".$entity->getPartitionKey()."' />
 	</div></td>";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='accessCode' id='accessCode' value='".$entity->getRowKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='date' id='date' value='".$entity->getRowKey()."' />
 	</div></td>";
 	echo "<td><div class='form-group'>
-	<Textarea type='text' name='date' id='date' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
+	<Textarea type='text' name='accessCode' id='accessCode' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
      </div></td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='EventName' id='EventName'  class='form-control' placeholder='Event Name' required>".$entity->getProperty("EventName")->getValue()."</Textarea>
@@ -637,7 +637,7 @@ else if($_GET['div']== "showEvents"){
 	else{
 	echo "<tr>";
 	echo "<td>".$entity->getPartitionKey()."</td>";
-	echo "<td>".$entity->getProperty("Date")->getValue()."</td>";
+	echo "<td>".$entity->getRowKey()."</td>";
 	echo "<td>".$entity->getProperty("EventName")->getValue()."</td>";
 	echo "<td>".$entity->getProperty("EventPlace")->getValue()."</td>";
 	echo "</tr>";	
