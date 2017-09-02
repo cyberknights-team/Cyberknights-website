@@ -618,9 +618,9 @@ else if($_GET['div']== "showEvents"){
 	echo "<tr><form action= 'controller/updateEvents.php' method='POST'>";
 	echo "<input type='hidden' name='partition' value='".$entity->getPartitionKey()."' />";
 	echo "<input type='hidden' name='rowKey' value='".$entity->getRowKey()."' />";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='eventCode' value='".$entity->getPartitionKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Event Code' name='eventCode' id='eventCode' value='".$entity->getPartitionKey()."' />
 	</div></td>";
-	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='accessCode' value='".$entity->getRowKey()."' />
+	echo "<td><div class='form-group'><input type='text' class='form-control' placeholder='Access Code' name='accessCode' id='accessCode' value='".$entity->getRowKey()."' />
 	</div></td>";
 	echo "<td><div class='form-group'>
 	<Textarea type='text' name='date' id='date' class='form-control' placeholder='Date' required>".$entity->getProperty("Date")->getValue()."</Textarea>
